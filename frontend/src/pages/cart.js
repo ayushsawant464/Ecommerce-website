@@ -17,7 +17,7 @@ import { Link as RouterLink } from 'react-router-dom'
 import { loadStripe } from '@stripe/stripe-js'
 import { Elements , useStripe, useElements, CardElement} from '@stripe/react-stripe-js'
 
-const STRIPE_PUBLIC_KEY='pk_test_51QL6AwLghG2tL7v5VTE5mhHiW1qB3DJeuQIfQogOiTXnkNYQ30H79t14hfwPq6gbh9L0Qo9jqSbnYaBuvTRKNTNY00UwmHuKbO' || process.env.STRIPE_PUBLIC_KEY
+const STRIPE_PUBLIC_KEY=process.env.STRIPE_PUBLIC_KEY
 const stripePromise = loadStripe(STRIPE_PUBLIC_KEY)
 
 const StyledPaper = styled(Paper)(({ theme }) => ({
